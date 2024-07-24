@@ -1,0 +1,146 @@
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    z-index: 99999;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+body{
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+    overflow-x: hidden;
+    /* overflow: hidden; */
+    /* height: 10000px; */
+}
+
+.nav-tab{
+    background-color: #0D0D0D;
+}
+
+.logo{
+    width: 50px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.movie{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+
+}
+
+.cardImage{
+    /* position: relative;  */
+    /* z-index: 1;   */
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    /* position: relative; */
+    display: block;
+    z-index: 11;
+    transition: all .7s ;
+}
+.movie:hover img{
+    transform: scale(1.3) rotate(5deg);
+    filter: blur(2px);
+    /* transform: rotate(10deg); */
+    
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+    transition: all .7s ease-in-out;
+}
+
+
+
+.movie:hover .layer{
+    opacity: 1;
+    /* transition: opacity 1s; */
+}
+
+
+
+.side-nav-menu{
+    z-index: 99;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+a:hover{
+    position: relative;
+    top: -1px;
+    color: #ff655c ;
+}
+
+.logo{
+    width: 30px;
+}
+
+
+
+::placeholder{
+  color: #5e5c5c !important;
+}
+
+.animate__animated{
+    --animate-duration: .7s;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    /* transition: all 1s ease-in-out; */
+  
+}
+
+.movie:hover .animate__animated{
+    visibility: visible; 
+    display: block;
+    opacity: 1;
+    /* --animate-delay: 0.9s; */
+
+}
+
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
