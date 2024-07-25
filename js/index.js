@@ -87,6 +87,10 @@ getMovies();
 
 newplaying.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getMovies();
  });
 
@@ -144,6 +148,10 @@ async function getAiringTodayMovies() {
 
 airtoday.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getAiringTodayMovies();
  });
 //////////////////////////////////////////////////////////
@@ -161,6 +169,10 @@ async function getOnAirMovies() {
 // getOnAirMovies();
 onair.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getOnAirMovies();
  });
 
@@ -181,6 +193,10 @@ async function getPopularMovies() {
 // getPopularMovies();
 popular.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getPopularMovies();
  });
 
@@ -202,6 +218,10 @@ async function getTrendyMovies() {
 // getTrendyMovies();
 trendy.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getTrendyMovies();
  });
 
@@ -221,6 +241,10 @@ async function getUpComingMovies() {
 // getUpComingMovies();
 upcoming.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getUpComingMovies();
  });
 
@@ -240,6 +264,10 @@ async function getTopRatedMovies() {
 // getTopRatedMovies();
 toprated.addEventListener("click", function (e) {
     closeSideNav();
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
     getTopRatedMovies();
  });
 

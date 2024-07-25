@@ -133,6 +133,11 @@ a{
     transition: all .3s;
 }
 
+span:hover{
+    position: relative;
+    /* top: -1px; */
+    color: #ff655c ;
+}
 a:hover{
     position: relative;
     /* top: -1px; */
