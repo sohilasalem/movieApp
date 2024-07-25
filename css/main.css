@@ -155,14 +155,16 @@ a:hover{
     /* opacity: 0; */
     /* visibility: hidden; */
     /* transition: all 2s ease-in-out; */
-  
+    /* animation: infinite;   */
+    /* --animate-delay: 9s; */
 }
 
 .movie:hover .animate__animated{
     /* visibility: visible;  */
     display: block;
     /* opacity: 1; */
-    /* --animate-delay: 0.9s; */
+    /* --animate-delay: 9s; */
+    /* animation: infinite;   */
 }
 
 :root {
@@ -241,3 +243,10 @@ input[type=number] {
     font-weight: 700;
 }
 
+#btn-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: none;
+}

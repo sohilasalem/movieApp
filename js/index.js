@@ -1,6 +1,17 @@
 var rowData = document.getElementById("rowData");
 var searchInput = document.getElementById("searchInput");
-var polo = document.getElementById("polo");
+var animateanimated = document.getElementById("animate__animated");
+// var p = document.getElementById("p");
+var newplaying = document.getElementById("newplaying");
+var airtoday = document.getElementById("airtoday");
+var onair = document.getElementById("onair");
+var popular = document.getElementById("popular");
+var toprated = document.getElementById("toprated");
+var trendy = document.getElementById("trendy");
+var upcoming = document.getElementById("upcoming");
+const inputs = document.querySelectorAll("input");
+
+
 
 function openSideNav() {
     $(".side-nav-menu").animate({
@@ -72,7 +83,12 @@ async function getMovies() {
     displayMovies(allData);
 // console.log(response.results);
 } 
-// getMovies();
+getMovies();
+
+newplaying.addEventListener("click", function (e) {
+    closeSideNav();
+    getMovies();
+ });
 
 /////////////////////////////////////////////////
 
@@ -91,8 +107,8 @@ function displayMovies() {
                 <div class="movie overflow-hidden p-1 rounded-2 cursor-pointer">
                   <img src="${allData[i].poster_path ? `https://image.tmdb.org/t/p/w500${allData[i].poster_path}` : 'imgs/default-movie.jpg'}" alt="${allData[i].title ? allData[i].title : 'undefined'}" class="rounded-2">
                      <div class="layer rounded-2 p-3">
-                        <h1 class="animate__animated animate__fadeInDown text-center mb-2 fs-2">${allData[i].original_title ? allData[i].original_title : allData[i].original_name}</h1>                       
-                        <p class="polo animate__animated animate__flipInX ">${overview}</p>
+                        <h1 class="animate__animated  animate__fadeInDown text-center mb-2 fs-2">${allData[i].original_title ? allData[i].original_title : allData[i].original_name}</h1>                       
+                        <p id="p" class="mmm animate__animated animate__flipInX ">${overview}</p>
                         <p class="animate__animated animate__fadeInUp mb-4"><span class="fst-normal"><span> Release Date: </span> ${allData[i].release_date ? allData[i].release_date : allData[i].first_air_date}</span></p>
                         <h4 class="animate__animated animate__fadeInUp">
                         ${allData[i].vote_average == 0 ? '<i class="fa-solid fa-star text-gray fs-6"></i>' : ''}
@@ -111,7 +127,7 @@ function displayMovies() {
         `;
     }
     rowData.innerHTML = items;
-    
+
 }
 
 async function getAiringTodayMovies() {
@@ -125,6 +141,11 @@ async function getAiringTodayMovies() {
     
 } 
 // getAiringTodayMovies();
+
+airtoday.addEventListener("click", function (e) {
+    closeSideNav();
+    getAiringTodayMovies();
+ });
 //////////////////////////////////////////////////////////
 
 async function getOnAirMovies() {
@@ -138,6 +159,10 @@ async function getOnAirMovies() {
     
 } 
 // getOnAirMovies();
+onair.addEventListener("click", function (e) {
+    closeSideNav();
+    getOnAirMovies();
+ });
 
 
 /////////////////////////////////////////////////////////////////////////
@@ -154,7 +179,10 @@ async function getPopularMovies() {
     
 } 
 // getPopularMovies();
-
+popular.addEventListener("click", function (e) {
+    closeSideNav();
+    getPopularMovies();
+ });
 
 ///////////////////////////////////////////////////////
 
@@ -172,6 +200,11 @@ async function getTrendyMovies() {
     displayMovies(response.results);
 }
 // getTrendyMovies();
+trendy.addEventListener("click", function (e) {
+    closeSideNav();
+    getTrendyMovies();
+ });
+
 
 /////////////////////////////////////////////////////////////////////
 
@@ -185,8 +218,11 @@ async function getUpComingMovies() {
     displayMovies(response.results);
     console.log(response.results);
 } 
-getUpComingMovies();
-
+// getUpComingMovies();
+upcoming.addEventListener("click", function (e) {
+    closeSideNav();
+    getUpComingMovies();
+ });
 
 
 //////////////////////////////////////////////////////////////////
@@ -202,8 +238,78 @@ async function getTopRatedMovies() {
     console.log(response.results);
 } 
 // getTopRatedMovies();
+toprated.addEventListener("click", function (e) {
+    closeSideNav();
+    getTopRatedMovies();
+ });
+
+/////////////////////////////////
+// const p = document.getElementById("p");
+// p.addEventListener("mouseenter", function (e) {
+// // $("p").css("dispaly","block")
+// // p.classList.replace("d-none", "d-block");
+// document.querySelector(".mmm").replace("d-none", "d-block");
 
 
-///////////////////////////
+  
+//  });
+
+// var inputError=document.getElementById('inputError');
+// formData.addEventListener("input", function () {
+//     if (validationEmail() && validationPassword()) {
+//        isValid = true;
+//     } else {
+//        isValid = false;
+//     }
+//  });
+
+// function validationEmail() {
+//     const regexStyle =
+//        /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+ 
+//     if (regexStyle.test(inputs[0].value)) {
+//        // el tmam
+//        inputs[0].classList.add("is-valid");
+//        inputs[0].classList.remove("is-invalid");
+//        return true;
+//     } else {
+//        //el mesh tmam
+ 
+//        inputs[0].classList.add("is-invalid");
+//        inputs[0].classList.remove("is-valid");
+ 
+//        return false;
+//     }
+//  }
 
 
+ ////////////////////////
+
+
+//  let homeHeight = $('#demoo').height(); // height home section
+
+$(window).scroll(function(){
+    // console.log("hiu");
+    // var btn=
+var top=  $(window).scrollTop()
+    // console.log(top);
+    if(top > 800){
+$('#btn-up').show()
+        // $('.btnUp').addClass('.d-block')
+// $('.d-none').show(1000)
+
+    }else{
+        // $('.btnup').addClass('.d-none')
+$('#btn-up').hide()
+
+
+    }
+})
+
+$('#btn-up').click(function(){
+    $(window).scrollTop(0)
+    $('html,body').animate({
+    scrollTop:0
+    },400)
+  })
+  
