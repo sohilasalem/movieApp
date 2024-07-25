@@ -133,12 +133,12 @@ a{
     transition: all .3s;
 }
 
-span:hover{
+a:hover{
     position: relative;
     /* top: -1px; */
     color: #ff655c ;
 }
-li:hover{
+span:hover{
     position: relative;
     /* top: -1px; */
     color: #ff655c ;
