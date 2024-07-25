@@ -157,19 +157,12 @@ a:hover{
 .animate__animated{
     --animate-duration: 1s;
     display: none;
-    /* opacity: 0; */
-    /* visibility: hidden; */
-    /* transition: all 2s ease-in-out; */
-    /* animation: infinite;   */
-    /* --animate-delay: 9s; */
 }
 
 .movie:hover .animate__animated{
     /* visibility: visible;  */
     display: block;
-    /* opacity: 1; */
-    /* --animate-delay: 9s; */
-    /* animation: infinite;   */
+
 }
 
 :root {
