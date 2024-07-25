@@ -15,41 +15,43 @@
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body id="demoo" class="demoo  w-100">
+    <!-- <img src="imgs/default-movie.jpg" alt=""> -->
     
     <div class="form " id="form">
         <!-- <form role="search"> -->
-            <input id="searchInput" onkeyup="searchByName(this.value.trim())" class="form-control w-50 mt-5  mx-auto text-white bg-transparent rounded-pill border-3" type="search" placeholder="  Search" aria-label="Search">
+            <input id="searchInput" onkeyup="searchByName(this.value.trim())" class="form-control w-50 mt-5 mb-2 mx-auto text-white bg-transparent rounded-pill border-2" type="search" placeholder="  Search" aria-label="Search">
           <!-- </form> -->
-          <!-- <h1 class="animate__animated animate__fadeInDown d-block ">An animated element</h1> -->
     </div>
 
 
 <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
     <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-3">
         <div class="links fw-lighter">
-            <ul class="list-unstyled overflow-hidden">
+            <ul class="list-unstyled overflow-hidden ps-3">
                 <li  onclick="getMovies(); closeSideNav()" class="newPlaying py-3 position-relative cursor-pointer"><a href="">New Playing</a></li>
-                <li onclick="getPopularMovies(); closeSideNav()" class=" py-3 position-relative cursor-pointer"><a href=""  id="popular">Popular</a></li>
+                <li onclick="getAiringTodayMovies(); closeSideNav()"  class=" py-2 position-relative cursor-pointer"><a href=""  id="polo">Airing Today</a></li>
+                <li onclick="getOnAirMovies(); closeSideNav()" class=" py-3 position-relative cursor-pointer"><a href=""  id="">On The Air</a></li>
+                <li onclick="getPopularMovies(); closeSideNav()" class=" py-2 position-relative cursor-pointer"><a href=""  id="popular">Popular</a></li>
                 <li onclick="getTopRatedMovies(); closeSideNav()" class="py-3 position-relative cursor-pointer"><a href="">Top Rated</a></li>
-                <li onclick="getTrendyMovies(); closeSideNav()" class="py-3 position-relative cursor-pointer"><a href="" id="trendy">Trending</a></li>
+                <li onclick="getTrendyMovies(); closeSideNav()" class="py-2 position-relative cursor-pointer"><a href="" id="trendy">Trending</a></li>
                 <li onclick="getUpComingMovies(); closeSideNav()" class="py-3 position-relative cursor-pointer"><a href="" id="yourElementId">Up Coming</a></li>
-                <li onclick=" closeSideNav()" class="py-3 position-relative cursor-pointer"><a href="#contact">Contact Us</a></li>
+                <li onclick=" closeSideNav()" class="py-2 position-relative cursor-pointer"><a href="#contact">Contact Us</a></li>
 
             </ul>
         </div>
         <div class="nav-footer">
-            <div class="icons">
-                <i class="fa-brands fa-facebook mx-2"></i>
+            <div class="icons mb-4 ms-3">
+                <i class="fa-brands fa-facebook-f mx-2 "></i>
                 <i class="fa-brands fa-twitter mx-2"></i>
                 <i class="fa-solid fa-globe mx-2"></i>
             </div>
             <div class="footer">
-                <p>Copyright Â© 2022 All Rights <br>Reserved.</p>
+                <p class="mb-3 fw-lighter">Copyright Â© 2022 All Rights <br>Reserved.</p>
             </div>
         </div>
     </div>
     <div class="nav-header d-flex flex-column justify-content-between py-3 text-center px-2 bg-white text-black">
-        <img class="logo mx-2" src="imgs/logo.png" alt="" srcset="">
+        <img class="logo mx-2 my-2" src="imgs/logo.png" alt="">
         <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
         <div>
             <i class="fa-solid fa-globe d-block mb-2"></i>
@@ -58,27 +60,14 @@
     </div>
 </div>
 
+<div class="container w-75" id="searchInput"></div>
 
 
-
-
-
-<div class="container w-75" id="searchInput">
-   
-</div>
-   
-    <div class="container  ">
-        <div class="row py-1 g-1 min-vh-100 " id="rowData">
+   <section>
+    <div class="container  ps-5">
+        <div class="row py-1 gx-1 min-vh-100 " id="rowData">
             <span class="loader position-fixed top-50 start-50 end-50 bottom-50"></span> 
-            <!-- <div class="movie-card overflow-hidden col-lg-4 col-md-6 col-sm-12 p-4">
-                <div class="movie overflow-hidden p-1 rounded-2 cursor-pointer">
-                    <img src="https://image.tmdb.org/t/p/w500${allData[i].poster_path}" alt="${allData[i].title}" class="rounded-2">
-                    <div class="layer rounded-2 p-3">
-                        <h1 class="animate__animated animate__fadeInDown fs-2">${allData[i].original_title}</h1> -->
-                        <!-- <p id="polo" class="polo animate__animated animate__flipInX d-none"></p> -->
-                        <!-- <p class="animate__animated animate__fadeInUp"><span class="fst-normal"><span> release_date </span> ${allData[i].release_date}</span></p>
-                        <h3 class="animate__animated animate__fadeInUp"><i class="fa-solid fa-star text-warning fs-6"></i><i class="fa-solid fa-star text-warning fs-6"></i><i class="fa-solid fa-star text-warning fs-6"></i><i class="fa-regular fa-star-half-stroke text-warning fs-6"></i></h3>
-                        <h3 class="animate__animated animate__fadeInUp">${allData[i].vote_average}</h3> -->
+            
                     </div>
                 </div>
             </div>
@@ -86,13 +75,44 @@
             <!-- <p id="polo" class="animate__animated animate__flipInX" > </p> -->
         </div>
     </div>
-
-        
-
-
 </div>
+</section>
 
-
+<section id="contact" class="container text-white  py-5">
+    <h2>Contact US</h2>
+    <form>
+        <div class="row mt-3 ps-2">
+            <div class="col-md-6">
+                <input type="text" required="" id="name" maxlength="37" class="form-control mt-4" placeholder="Enter Your Name">
+                <span class="error"></span>
+            </div>
+            <div class="col-md-6">
+                <input type="email" required="" id="email" class="form-control mt-4" placeholder="Enter Your Email">
+                <span class="error"></span>
+            </div>
+            <div class="col-md-6">
+                <input type="number" required="" id="phone" class="form-control mt-4" placeholder="Enter Your Phone">
+                <span class="error"></span>
+            </div>
+            <div class="col-md-6">
+                <input type="number" required="" id="age" class="form-control mt-4" placeholder="Enter Your Age">
+                <span class="error"></span>
+            </div>
+            <div class="col-md-6 position-relative">
+                <input type="password" required="" id="password" class="form-control mt-4" placeholder="Enter Your Password">
+                <span class="error"></span>
+                <span class="showPass" style="opacity: 0; bottom: -20px;"><i data-show="show" class="fa-solid fa-eye-slash"></i></span>
+            </div>
+            <div class="col-md-6">
+                <input type="password" required="" id="repassword" class="form-control mt-4" placeholder="ReEnter Password">
+                <span class="error"></span>
+            </div>
+            <div class="col-md-12  mt-4">
+                <button type="submit" class="form-btn rounded-2 mb-3 ">Submit</button>
+            </div>
+        
+    </div></form>
+</section>
     
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
