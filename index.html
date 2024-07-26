@@ -27,11 +27,11 @@
     </div>
 
     <div id="btn-up" class="btnUp">
-        <i class="fa-solid fa-circle-arrow-up  fa-2x "></i>
+        <i class="fa-solid fa-arrow-up-long fa-1x"></i>
         </div>
 
 
-<div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+<div id="side-nav-menu" class="side-nav-menu min-vh-100 position-fixed d-flex top-0 ">
     <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-3">
         <div class="links fw-lighter">
             <ul class="list-unstyled overflow-hidden ps-3">
@@ -93,46 +93,45 @@
 <section id="contact" class="container text-white ps-md-5  py-5">
     <h2>Contact US</h2>
     <form>
-        <div class="row mt-3 ps-2 ">
+        <div class="row mt-3 ps-2 ps-sm-4 ">
             <div class="col-md-6">
-                <input type="text" required="" id="name" maxlength="37" class="form-control mt-4" placeholder="Enter Your Name">
+                <input onkeyup="inputsValidation()" type="text" required="" id="UsertName" maxlength="37" class="form-control mt-4" placeholder="Enter Your Name">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div id="inputName" class=" animate__animated animate__flipInX txt d-none ">Invaild name start with letter</div>
             </div>
             <div class="col-md-6">
-                <input type="email" required="" id="email" class="form-control mt-4" placeholder="Enter Your Email">
+                <input onkeyup="inputsValidation()" type="email" required="" id="UsertEmail" class="form-control mt-4" placeholder="Enter Your Email">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div id="inputEmail" class=" animate__animated animate__flipInX txt d-none ">Invaild Email example@yyyy.mmm</div>
+    <!-- <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div> -->
             </div>
             <div class="col-md-6">
-                <input type="number" required="" id="phone" class="form-control mt-4" placeholder="Enter Your Phone">
+                <input onkeyup="inputsValidation()" type="number" required="" id="Userphone" class="form-control Userphone mt-4" placeholder="Enter Your Phone">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div id="inputPhone" class="animate__animated animate__flipInX txt d-none ">Invaild Phone Number</div>
+    <!-- <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div> -->
             </div>
             <div class="col-md-6">
-                <input type="number" required="" id="age" class="form-control mt-4" placeholder="Enter Your Age">
+                <input onkeyup="inputsValidation()" type="number" required="" id="Userage" class="form-control Userage mt-4" placeholder="Enter Your Age">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div id="inputAge" class="animate__animated animate__flipInX txt d-none ">Your Age must be over 16+</div>
+    <!-- <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div> -->
             </div>
             <div class="col-md-6 position-relative">
-                <input type="password" required="" id="password" class="form-control mt-4" placeholder="Enter Your Password">
+                <input onkeyup="inputsValidation()" type="password" required="" id="Userpass" class="form-control mt-4" placeholder="Enter Your Password">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div id="inputPass" class="animate__animated animate__flipInX txt d-none ">password must contain numbers & letters at least eight character </div>
+    <!-- <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div> -->
                 <span class="showPass" style="opacity: 0; bottom: -20px;"><i data-show="show" class="fa-solid fa-eye-slash"></i></span>
             </div>
             <div class="col-md-6">
-                <input type="password" required="" id="repassword" class="form-control mt-4" placeholder="ReEnter Password">
+                <input onkeyup="inputsValidation()" type="password" required="" id="UserRepass" class="form-control mt-4" placeholder="ReEnter Password">
                 <span class="error"></span>
-                <div id="inputError" class="d-none alert text-danger">All inputs is required</div>
-    <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div>
+                <div  id="inputRepass" class="animate__animated animate__flipInX txt d-none UserRepass">password not match</div>
+    <!-- <div id="inputInvalid" class="d-none alert text-danger">incorrect email or password</div> -->
             </div>
-            <div class="col-md-12  mt-4">
-                <button type="submit" class="form-btn rounded-2 mb-3 ">Submit</button>
+            <div class="col-md-12 position-relative  mt-4">
+                <button onclick="clearForm()" id="btn" type="submit" class="form-btn movingBtn rounded-2 mb-3 ">Submit</button>
             </div>
         
     </div></form>

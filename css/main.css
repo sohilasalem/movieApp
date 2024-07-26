@@ -138,7 +138,7 @@ a:hover{
     /* top: -1px; */
     color: #ff655c ;
 }
-span:hover{
+.links span:hover{
     position: relative;
     /* top: -1px; */
     color: #ff655c ;
@@ -209,16 +209,27 @@ input[type=number] {
 
 .form-btn
 {
-    background-color: var(--main-color);
-    color: #fff!important;
+    background-color: #000;
+    color: #fff;
     padding: 10px 25px;
     transition: all 0.2s ease-in-out;
     border: none;
 }
 .form-btn:hover
 {
-    color: #000!important;
-    background-color: #F8F6F6;
+    color: #000;
+    background-color: #F8F6F6 ;
+}
+
+.invalid{
+    background-color: #DC3545;
+
+}
+
+.invalid:hover{
+    background-color: #DC3545;
+    color: #F8F6F6 ;
+
 }
 .showPass
 {
@@ -243,8 +254,78 @@ input[type=number] {
 
 #btn-up{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 39px;
+    right: 30px;
     z-index: 999999;
     display: none;
+}
+
+.ttn {
+    position: absolute;
+    left: 5px;
+    bottom: -60px;
+    transition: left 0.5s;
+    /* margin-bottom: 100px; */
+    /* display: none; */
+}
+
+
+/* .btnUp i{
+    position: relative;
+}
+
+.btnUp i::after{
+    content: "";
+    border: 15px navy solid;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 2px;
+
+    right: 5px;
+} */
+
+
+
+.shake-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    /* cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px; */
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both ;
+    /* transform: translate3d(0, 0, 0); */
+    /* backface-visibility: hidden; */
+    /* perspective: 1000px; */
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+/* .hover-button:hover {
+    animation: move-left-right 2s forwards;
+}
+
+@keyframes move-left-right {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+} */
+
+.txt{
+    color: #DC3545;
 }
