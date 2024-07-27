@@ -1,3 +1,8 @@
+::selection{
+    background-color: #fff;
+    color: #5e5c5c;
+}
+
 .loader {
     width: 48px;
     height: 48px;
@@ -231,30 +236,10 @@ input[type=number] {
     color: #F8F6F6 ;
 
 }
-.showPass
-{
-    background-color: transparent;
-    position: absolute;
-    right: 10px;
-    bottom: -20px;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-}
-.error
-{
-    color: rgb(214, 46, 51);
-    position: absolute;
-    font-weight: 700;
-}
 
 #btn-up{
     position: fixed;
-    bottom: 39px;
+    bottom: 30px;
     right: 30px;
     z-index: 999999;
     display: none;
@@ -265,13 +250,15 @@ input[type=number] {
     left: 5px;
     bottom: -60px;
     transition: left 0.5s;
-    /* margin-bottom: 100px; */
+    /* margin-top: 20px; */
+    /* margin-bottom: 65px !important; */
     /* display: none; */
 }
 
 
 /* .btnUp i{
     position: relative;
+    z-index: 999999;
 }
 
 .btnUp i::after{
@@ -282,8 +269,8 @@ input[type=number] {
     position: absolute;
     border-radius: 50%;
     bottom: 2px;
-
     right: 5px;
+    z-index: 222222;
 } */
 
 
@@ -292,6 +279,7 @@ input[type=number] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
+    margin-bottom: 200px;
     /* cursor: pointer;
     background-color: #007bff;
     color: white;
@@ -328,4 +316,22 @@ input[type=number] {
 
 .txt{
     color: #DC3545;
+
+}
+
+@media screen and (max-width : 576px) {
+    .nav-header{
+        background-color: transparent !important;
+    }
+    
+    .nav-header .open-close-icon{
+        color: #fff !important;
+        font-size: x-large !important;
+    }
+
+    .nav-header .fa-globe ,
+    .fa-share-nodes{
+        color: transparent;
+    }
+    
 }

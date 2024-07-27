@@ -11,7 +11,7 @@ var upcoming = document.getElementById("upcoming");
 var inputs = document.querySelectorAll("input");
 var UsertEmail=document.getElementById('inputEmail');
 var inputError=document.getElementById('inputError');
-
+var p=document.getElementById('p');
 
 
 
@@ -151,6 +151,7 @@ function displayMovies() {
     rowData.innerHTML = items;
 
 }
+//////////////////////////////////////////////////////
 
 async function getAiringTodayMovies() {
     rowData.innerHTML=""
@@ -478,3 +479,8 @@ function passwordValidation() {
 function repasswordValidation() {
     return document.getElementById("UserRepass").value == document.getElementById("Userpass").value
 } 
+
+
+function clearForm(){
+    Userage.value=""
+}
